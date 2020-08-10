@@ -5,7 +5,6 @@ import (
 	"log"
 	"os"
 	"strings"
-	"time"
 )
 
 //jumpserver.stc-xxxafa.com.cn:51736，目标：172.22.0.13:8088，
@@ -47,7 +46,5 @@ func main() {
 		fmt.Printf("Successfully Nice %s \n",_dst_1_src)
 	}
 
-	time.Sleep(100000000 * time.Millisecond)
-	time.Sleep(100000000 * time.Millisecond)
-
+	select {}
 }
