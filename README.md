@@ -7,9 +7,28 @@
 ```yaml
 sshrw: v1
 config:
-  tunnel: "admin@jumpserver.stc-xxxxc.com.cn:6593"
+  tunnel: "jump@fuckserver.slb-bibibi.com.cn:9102"
   password: "aaaaa!1100"
-  destinations: ['172.22.0.13:8088->localhost:2293','172.22.0.13:8084->localhost:2222']
+  destinations: ['123.111.111.124:8088->localhost:2293','192.2.1.131:8084->localhost:2222']
 
 ```
 
+
+##### release 
+
+
+```bash
+
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build  -o sshrw-linux-x86_64 ./
+CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build  -o sshrw-windows-x86_64 ./
+
+```
+
+
+
+##### 提示
+
+```bash
+# 内网IP需要混淆 需要隐藏 ？ 2020年我听过最大的笑话。
+# 跳板机器没暴露，内网IP需要打乱混淆一下，现在真是什么人都能写代码了/ :)。
+```

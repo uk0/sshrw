@@ -7,17 +7,15 @@ import (
 	"strings"
 )
 
-//jumpserver.stc-xxxafa.com.cn:51736，目标：172.22.0.13:8088，
-
 func main() {
 
 	cnf :=GetConfig()
-	fmt.Println(cnf.Config.Tunnel)
-	fmt.Println(cnf.Config.Destinations)
-	fmt.Println(cnf.Config.Password)
+	//fmt.Println(cnf.Config.Tunnel)
+	//fmt.Println(cnf.Config.Destinations)
+	//fmt.Println(cnf.Config.Password)
 
 	for _,dstsrc :=range cnf.Config.Destinations {
-		_dst_1_src :=strings.Split(dstsrc,"->")
+		dst1Src :=strings.Split(dstsrc,"->")
 		// Setup the tunnel, but do not yet start it yet.
 		tunnel := NewSSHTunnel(
 			// User and host of tunnel server, it will default to port 22
@@ -27,8 +25,8 @@ func main() {
 			//PrivateKeyFile("path/to/private/key.pem"), // 1. private key
 			cnf.Config.Password,                  // 2. password
 			// The destination host and port of the actual server.
-			_dst_1_src[0],
-			_dst_1_src[1],
+			dst1Src[0],
+			dst1Src[1],
 
 		)
 		// You can provide a logger for debugging, or remove this line to
@@ -43,7 +41,7 @@ func main() {
 
 		go tunnel.Start()
 
-		fmt.Printf("Successfully Nice %s \n",_dst_1_src)
+		fmt.Printf("Successfully  :) %s \n", dst1Src)
 	}
 
 	select {}
