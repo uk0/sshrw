@@ -25,10 +25,3 @@ CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build  -o sshrw-windows-x86_64 ./
 ```
 
 
-
-##### 提示
-
-```bash
-# 内网IP需要混淆 需要隐藏 ？ 2020年我听过最大的笑话。
-# 跳板机器没暴露，内网IP需要打乱混淆一下，现在真是什么人都能写代码了/ :)。
-```
