@@ -1,5 +1,5 @@
 sshrw: v1
 config:
-  tunnel: "jump@fuckserver.slb-bibibi.com.cn:9102"
+  tunnel: "jump@jump.slb-didachuxing.com.cn:9102"
   password: "aaaaa!1100"
   destinations: ['123.111.111.124:8088->localhost:2293','192.2.1.131:8084->localhost:2222']
